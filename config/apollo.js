@@ -10,10 +10,19 @@ const authLink = setContext(() => {
         headers: { authorization: token ? `Bearer ${token}` : "" },
     };
 });
-const client = new ApolloClient({
+
+const apolloClient = new ApolloClient({
     connectToDevTools: true,
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+        typePolicies: {
+            OrderGroup: {
+                // In an inventory management system, products might be identified
+                // by their UPC.
+                keyFields: false,
+            },
+        }
+    }),
     link: authLink.concat(httplink),
 });
 
-export default client;
+export default apolloClient;
