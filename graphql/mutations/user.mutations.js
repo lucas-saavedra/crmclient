@@ -1,3 +1,4 @@
+
 import { gql } from "@apollo/client";
 export const ADD_USER = gql`
 mutation($userPayload: UserInput!) {
@@ -9,3 +10,10 @@ mutation($userPayload: UserInput!) {
     }
   }
   `
+export const AUTH_USER = gql`
+mutation($authPayload: AuthInput!) {
+    authUser(authPayload: $authPayload) {
+      token
+    }
+  }  
+`

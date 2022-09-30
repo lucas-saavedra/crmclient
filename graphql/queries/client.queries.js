@@ -3,7 +3,7 @@ import { gql } from "@apollo/client";
 export const GET_CLIENT = gql`
   query getClientId($id: ID!) {
     getClient(id: $id) {
-        id
+      id
       name
       lastname
       email
@@ -14,3 +14,17 @@ export const GET_CLIENT = gql`
     }
   }
 `;
+export const GET_CLIENTS_SELLER = gql`
+query {
+  getClientsSeller {
+      name
+      id
+      lastname
+      email
+      organization
+      phone
+      createdAt
+      updatedAt
+    }
+  }
+  `

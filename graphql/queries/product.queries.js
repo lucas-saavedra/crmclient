@@ -7,8 +7,18 @@ query GetProduct($id: String!) {
     name
     stock
     price
-    createdAt
-    updatedAt
+
   }
 }
+`
+export const GET_PRODUCTS = gql`
+query getProducts {
+    getProducts {
+      id
+      name
+      stock
+      price
+      
+    }
+  }
 `
