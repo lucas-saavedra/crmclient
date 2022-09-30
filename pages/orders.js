@@ -19,7 +19,7 @@ const Orders = () => {
 
                 <h1 className='text-2xl text-gray-800 font-light'>Ordenes</h1>
                 <Link href="/neworder">
-                    <a className="bg-blue-800 rounded py-2 px-5 mt-5 inline-block text-white rounded text-sm hover:bg-gray-800 uppercase font-bold">
+                    <a className="inline-block bg-blue-800 rounded py-2 px-5 mt-5 inline-block text-white rounded text-sm hover:bg-gray-800 uppercase font-bold">
                         New Order
                     </a>
                 </Link>

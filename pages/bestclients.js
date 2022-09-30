@@ -28,7 +28,7 @@ const BestClients = () => {
     return (
         <Layout>
 
-            <ResponsiveContainer className='h-full' height={500} width="100%" >
+            <ResponsiveContainer className='h-full' height={550} width={"99%"} >
                 <BarChart
                     className={"mt-10"}
                     width={600}
@@ -42,7 +42,7 @@ const BestClients = () => {
                     }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="lastname" f/>
+                    <XAxis dataKey="lastname" f />
                     <YAxis />
                     <Tooltip />
                     <Legend />

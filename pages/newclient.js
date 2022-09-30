@@ -73,7 +73,7 @@ const NewClient = () => {
 
   return (
     <Layout>
-      <div className="text-2xl text-gray-800 font-light">New Client</div>
+      <div className=" text-2xl text-gray-800 font-light">New Client</div>
 
       <div className="flex justify-center mt-5">
         <div className="w-full max-w-sm">

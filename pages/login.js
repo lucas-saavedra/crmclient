@@ -34,12 +34,17 @@ const Login = () => {
                     }
                 })
 
-                const { token } = response.data.authUser;
+
 
                 setMessage({ msg: `Login in...`, error: false });
 
                 //saving the token in localStorage
-                localStorage.setItem('token', token);
+                setTimeout(() => {
+                    const { token } = response.data.authUser;
+                    localStorage.setItem('token', token);
+                  
+                }, 1000)
+
                 setTimeout(() => {
                     setMessage({ msg: null, error: false });
                     router.push("/")

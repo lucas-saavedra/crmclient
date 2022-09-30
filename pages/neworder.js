@@ -80,6 +80,7 @@ const Neworder = () => {
                     <OrderResume />
                     <Total />
                     <button
+                        disabled={validateOrder()}
                         type='button'
                         className={`bg-gray-800 
                         w-full mt-5 p-2 text-white 

@@ -25,6 +25,8 @@ const ProductResume = ({ product }) => {
                     <p className="text-sm">$ {product.price}</p>
                 </div>
                 <input
+                    min={0}
+
                     value={amount}
                     onChange={(e) => setAmount(e.target.value)}
                     className="
