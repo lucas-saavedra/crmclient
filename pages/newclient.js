@@ -5,10 +5,12 @@ import { useFormik } from "formik";
 import { useState } from "react";
 import FormInput from "../components/Input/FormInput";
 import Layout from "../components/Layout";
-import { ADD_CLIENT } from "../graphql/mutations/ADD_CLIENT";
-import { GET_CLIENTS_SELLER } from "../graphql/queries/GET_CLIENTS_SELLER";
+
 import SuccessMsg from "../components/Messages/SuccessMsg";
 import ErrorMsg from "../components/Messages/ErrorMsg";
+
+import { ADD_CLIENT } from "../graphql/mutations/client.mutations";
+import { GET_CLIENTS_SELLER } from "../graphql/queries/client.queries";
 
 const NewClient = () => {
 

@@ -3,7 +3,8 @@ import Link from "next/link"
 import Layout from "../components/Layout"
 import Loading from "../components/Loading";
 import Product from "../components/Product";
-import { GET_PRODUCTS } from "../graphql/queries/GET_PRODUCTS";
+import { GET_PRODUCTS } from "../graphql/queries/product.queries";
+
 
 const Products = () => {
     const { data, loading, error } = useQuery(GET_PRODUCTS);

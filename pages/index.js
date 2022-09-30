@@ -1,10 +1,11 @@
 import Layout from "../components/Layout";
 import { useQuery } from "@apollo/client";
-import { GET_CLIENTS_SELLER } from "../graphql/queries/GET_CLIENTS_SELLER";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Client from "../components/Client";
 import Loading from "../components/Loading";
+import { GET_CLIENTS_SELLER } from "../graphql/queries/client.queries";
+
 
 export default function Home() {
   const { data, loading, error } = useQuery(GET_CLIENTS_SELLER);

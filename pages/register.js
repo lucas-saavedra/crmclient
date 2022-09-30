@@ -7,7 +7,8 @@ import * as Yup from "yup"
 import { useFormik } from 'formik';
 import FormInput from "../components/Input/FormInput"
 import Layout from "../components/Layout"
-import { ADD_USER } from '../graphql/mutations/ADD_USER';
+import { ADD_USER } from '../graphql/mutations/user.mutations';
+
 
 
 

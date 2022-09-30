@@ -8,8 +8,9 @@ import Layout from "../components/Layout";
 
 import SuccessMsg from "../components/Messages/SuccessMsg";
 import ErrorMsg from "../components/Messages/ErrorMsg";
-import { ADD_PRODUCT } from "../graphql/mutations/ADD_PRODUCT";
-import { GET_PRODUCTS } from "../graphql/queries/GET_PRODUCTS";
+import { ADD_PRODUCT } from "../graphql/mutations/product.mutations";
+import { GET_PRODUCTS } from "../graphql/queries/product.queries";
+
 
 const NewProduct = () => {
 
@@ -51,17 +52,16 @@ const NewProduct = () => {
     }),
     onSubmit: async (values) => {
 
-      console.log(values);
       try {
-        const response = await addProduct({
+        const { data } = await addProduct({
           variables: {
             input: {
               ...values,
             },
           },
         });
-        console.log(response);
-        const { name } = response.data.addProduct;
+
+        const { name } = data.addProduct;
         setMessage(`Product created!: ${name}`);
         setTimeout(() => {
           setMessage(null);

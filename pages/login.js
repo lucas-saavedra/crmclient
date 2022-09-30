@@ -6,7 +6,8 @@ import * as Yup from "yup"
 
 import FormInput from "../components/Input/FormInput";
 import Layout from "../components/Layout";
-import { AUTH_USER } from '../graphql/mutations/AUTH_USER';
+import { AUTH_USER } from '../graphql/mutations/user.mutations';
+
 
 const Login = () => {
     const [message, setMessage] = useState({ msg: null, error: false });

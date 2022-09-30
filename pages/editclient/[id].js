@@ -1,17 +1,17 @@
 import { useMutation, useQuery } from "@apollo/client";
 import { Formik } from "formik";
 import { useRouter } from "next/router";
-
+import * as Yup from "yup";
 import Swal from 'sweetalert2';
+
 import FormInput from "../../components/Input/FormInput";
 import Layout from "../../components/Layout";
-import { GET_CLIENT } from "../../graphql/queries/GET_CLIENT";
-import * as Yup from "yup";
-import { UPDATE_CLIENT } from "../../graphql/mutations/UPDATE_CLIENT";
+
 import Loading from "../../components/Loading";
 import { PageNotFound } from "../../components/PageNotFound";
 
-
+import { UPDATE_CLIENT } from "../../graphql/mutations/client.mutations";
+import { GET_CLIENT } from "../../graphql/queries/client.queries";
 
 
 const EditClient = () => {

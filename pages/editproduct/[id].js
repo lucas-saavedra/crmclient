@@ -1,19 +1,16 @@
 import { useMutation, useQuery } from "@apollo/client";
 import { Formik } from "formik";
 import { useRouter } from "next/router";
-
 import Swal from 'sweetalert2';
-import FormInput from "../../components/Input/FormInput";
-import Layout from "../../components/Layout";
-
 import * as Yup from "yup";
 
+import FormInput from "../../components/Input/FormInput";
+
 import Loading from "../../components/Loading";
-
-import { UPDATE_PRODUCT } from "../../graphql/mutations/UPDATE_PRODUCT";
-import { GET_PRODUCT } from "../../graphql/queries/GET_PRODUCT";
+import Layout from "../../components/Layout";
 import { PageNotFound } from "../../components/PageNotFound";
-
+import { GET_PRODUCT } from "../../graphql/queries/product.queries";
+import { UPDATE_PRODUCT } from "../../graphql/mutations/product.mutations";
 
 const EditProduct = () => {
     const router = useRouter();

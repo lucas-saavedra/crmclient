@@ -1,11 +1,15 @@
 import { ApolloProvider } from '@apollo/client';
-import client from '../config/apollo';
+import apolloClient from '../config/apollo';
+import { OrderState } from '../context/orders/OrderState';
 
 const MyApp = ({ Component, pageProps }) => {
 
     return (
-        <ApolloProvider client={client}>
-            <Component {...pageProps} />
+
+        <ApolloProvider client={apolloClient}>
+            <OrderState>
+                <Component {...pageProps} />
+            </OrderState>
         </ApolloProvider>
     )
 }
