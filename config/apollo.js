@@ -2,7 +2,7 @@ import { ApolloClient, createHttpLink, InMemoryCache } from "@apollo/client";
 import { setContext } from "apollo-link-context";
 
 const httplink = createHttpLink({
-    uri: "http://localhost:6342/",
+    uri: "https://crmgraphql-production-5d02.up.railway.app/",
 });
 const authLink = setContext(() => {
     const token = localStorage.getItem("token");
