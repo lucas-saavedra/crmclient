@@ -1,8 +1,8 @@
 import { useMutation } from '@apollo/client';
 import Router from 'next/router';
 import Swal from 'sweetalert2';
-import { DELETE_PRODUCT } from '../graphql/mutations/DELETE_PRODUCT';
-import { GET_PRODUCTS } from '../graphql/queries/GET_PRODUCTS';
+import { DELETE_PRODUCT } from '../graphql/mutations/product.mutations';
+import { GET_PRODUCTS } from '../graphql/queries/product.queries';
 
 const Product = ({ product }) => {
     const { id, name, price, stock } = product;
@@ -15,7 +15,7 @@ const Product = ({ product }) => {
                 //rewritting the cache
                 cache.writeQuery({
                     query: GET_PRODUCTS,
-                    data: { getProducts: getProducts.filter(product => product.id !== id) }
+                    data: { getProducts: [...getProducts.filter(product => product.id !== id)] }
                 })
             }
         }

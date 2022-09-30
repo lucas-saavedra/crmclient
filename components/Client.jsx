@@ -1,8 +1,9 @@
 import { useMutation } from '@apollo/client';
 import Router from 'next/router';
 import Swal from 'sweetalert2';
-import { DELETE_CLIENT } from '../graphql/mutations/DELETE_CLIENT';
-import { GET_CLIENTS_SELLER } from '../graphql/queries/GET_CLIENTS_SELLER';
+import { DELETE_CLIENT } from '../graphql/mutations/client.mutations';
+import { GET_CLIENTS_SELLER } from '../graphql/queries/client.queries';
+
 
 const Client = ({ client, }) => {
     const { id, name, lastname, organization, email } = client;

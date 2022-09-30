@@ -1,7 +1,7 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
 import { useRouter } from 'next/router'
-import { GET_USER } from '../graphql/queries/GET_USER'
+import { GET_USER } from '../graphql/queries/user.queries'
 const Header = () => {
     const router = useRouter()
     const { data, loading, error } = useQuery(GET_USER);
